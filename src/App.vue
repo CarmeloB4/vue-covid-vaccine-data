@@ -1,6 +1,6 @@
 <template>
 <NavBar />
-<router-view/>
+<router-view />
 <Footer />
 </template>
 
@@ -24,5 +24,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#view {
+  padding-top: 1%;
 }
 </style>
