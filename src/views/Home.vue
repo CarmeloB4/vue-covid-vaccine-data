@@ -4,7 +4,6 @@
   <h3>Dati complessivi</h3>
 </div>
 <div id="dashboard">
-    <button @click="getDataSummary">fo</button>
 <pre>{{data}}</pre>
 </div>
 </template>
@@ -18,20 +17,13 @@ data() {
         data: {}
     }
 },
-methods: {
-  getDataSummary() {
+mounted() {
       fetch(this.url)
       .then(res => {
           return res.json()
       })
-      .then(this.setResult)
-  },
-  setResult(results) {
-      this.data = results.data.map((vcc) => vcc.dosi_somministrate);
-      
-      console.log(this.data)
+      .then((result) => this.data = result.data.map((vcc) => vcc.dosi_somministrate).reduce(((accumulator, currentValue) => accumulator + currentValue)))
   }
-}
 }
 </script>
 
