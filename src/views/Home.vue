@@ -1,10 +1,15 @@
 <template>
 <div id="home">
   <h2>Dati aggiornati campagna Vaccinazione Italia</h2>
-  <h3>Dati complessivi</h3>
 </div>
 <div id="dashboard">
-<pre>{{data}}</pre>
+<div id="logo-vcc">
+    <img src="..\assets\logo-vcc.png" alt="Logo somministrazioni">
+</div>    
+<h2>Totale somministrazioni</h2>
+<div id="data">
+<h2>{{data}}</h2>
+</div>
 </div>
 </template>
 
@@ -33,6 +38,30 @@ mounted() {
 }
 
 #dashboard {
-    color: black;
+    margin-top: 1%;
+    padding: 1%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(90, 128, 253);
+    color: white;
+    position: relative;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#logo-vcc {
+  float: left;
+  padding: 2%;
+  position: relative;
+  height: 50%;
+}
+
+#logo-vcc img {
+    width: 50px;
+    height: 50px;
+}
+
+#data {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 </style>

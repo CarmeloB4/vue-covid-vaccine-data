@@ -19,7 +19,7 @@ name: 'Footer'
   bottom: 0;
 }
 
-p {
+#footer p {
     color: whitesmoke;
 }
 </style>
