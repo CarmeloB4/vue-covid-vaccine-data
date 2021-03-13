@@ -1,7 +1,6 @@
 <template>
 <div id="home">
   <h2>Dati aggiornati campagna Vaccinazione Italia</h2>
-</div>
 <div id="dashboard">
 <div id="logo-vcc">
     <img src="..\assets\logo-vcc.png" alt="Logo somministrazioni">
@@ -9,6 +8,18 @@
 <h2>Totale somministrazioni</h2>
 <div id="data">
 <h2>{{data}}</h2>
+</div>
+</div>
+<div id="nav">
+    <div id="young" class="nav-button">
+           <router-link :to= "{ name: 'Young'}">18</router-link>
+    </div>
+    <div id="old" class="nav-button">
+       <router-link :to= "{ name: 'Medium'}">80</router-link>
+    </div>
+    <div id="medium" class="nav-button">
+       <router-link :to= "{ name: 'Medium' }">40</router-link>
+    </div>
 </div>
 </div>
 </template>
@@ -64,4 +75,41 @@ mounted() {
 #data {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+#nav {
+    margin-top:10vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.nav-button {
+    width: 100px;
+    padding: 3%;
+}
+
+.nav-button a:link {
+    color:white;
+    text-decoration: none;
+}
+
+.nav-button a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#young {
+    float: left;
+    background-color: cadetblue;
+}
+
+#medium {
+    margin: 0 auto;
+    background-color: chocolate;
+}
+
+#old {
+    float: right;
+    background-color: crimson;
+}
+
 </style>
