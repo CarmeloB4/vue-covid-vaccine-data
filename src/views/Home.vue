@@ -11,14 +11,15 @@
 </div>
 </div>
 <div id="nav">
+    <h3>Guarda i dati per fasce di età</h3>
     <div id="young" class="nav-button">
-           <router-link :to= "{ name: 'Young'}">18</router-link>
+        <router-link :to= "{ name: 'Young'}">16-39</router-link>
     </div>
     <div id="old" class="nav-button">
-       <router-link :to= "{ name: 'Medium'}">80</router-link>
+       <router-link :to= "{ name: 'Old'}">70-90+</router-link>
     </div>
     <div id="medium" class="nav-button">
-       <router-link :to= "{ name: 'Medium' }">40</router-link>
+       <router-link :to= "{ name: 'Medium' }">40-69</router-link>
     </div>
 </div>
 </div>
@@ -61,10 +62,11 @@ mounted() {
 }
 
 #logo-vcc {
-  float: left;
-  padding: 2%;
-  position: relative;
-  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #logo-vcc img {
@@ -82,9 +84,19 @@ mounted() {
     margin-right: 20vw;
 }
 
+#nav h3 {
+    padding: 2%;
+}
+
 .nav-button {
     width: 100px;
     padding: 3%;
+}
+
+.nav-button img {
+    width: 50px;
+    height: 50px;
+    float: left
 }
 
 .nav-button a:link {
