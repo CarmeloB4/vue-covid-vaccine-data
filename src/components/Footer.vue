@@ -17,6 +17,7 @@ name: 'Footer'
   background-color: #49bd96;
   position: fixed;
   bottom: 0;
+  left:0;
 }
 
 #footer p {

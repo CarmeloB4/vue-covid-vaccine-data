@@ -1,4 +1,5 @@
 <template>
+<div id="general">
 <div id="dashboard">
 <div id="logo-vcc">
     <img src="..\assets\logo-vcc.png" alt="Logo somministrazioni">
@@ -6,6 +7,7 @@
 <h2>Totale somministrazioni</h2>
 <div id="data">
 <h2>{{data}}</h2>
+</div>
 </div>
 </div>
 </template>
@@ -31,6 +33,10 @@ mounted() {
 </script>
 
 <style>
+#general {
+ padding-top: 2%;
+}
+
 #dashboard {
     margin-top: 1%;
     padding: 1%;

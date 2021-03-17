@@ -23,6 +23,9 @@
     </div>
 </div>
 </div>
+<div id="bottom">
+<p><a href="https://github.com/italia/covid19-opendata-vaccini">Fonte dati</a></p>
+</div>
 </template>
 
 <script>
@@ -31,7 +34,8 @@ name: 'Home',
 data() {
     return {
         url: 'https://raw.githubusercontent.com/italia/covid19-opendata-vaccini/master/dati/vaccini-summary-latest.json',
-        data: {}
+        data: {},
+        totalVaccine: {}
     }
 },
 mounted() {
@@ -39,7 +43,7 @@ mounted() {
       .then(res => {
           return res.json()
       })
-      .then((result) => this.data = result.data.map((vcc) => vcc.dosi_somministrate).reduce(((accumulator, currentValue) => accumulator + currentValue)))
+      .then((result) =>  this.data = result.data.map((vcc) => vcc.dosi_somministrate).reduce(((accumulator, currentValue) => accumulator + currentValue))) 
   }
 }
 </script>
@@ -124,4 +128,9 @@ mounted() {
     background-color: crimson;
 }
 
+#bottom {
+    position: fixed;
+    bottom: 10%;
+    width: 100%;
+}
 </style>

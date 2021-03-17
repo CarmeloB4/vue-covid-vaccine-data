@@ -26,6 +26,7 @@ name: "Navbar"
   background-color: #49bd96;
   position: fixed;
   top: 0;
+  left: 0;
 }
 
 #logo {
