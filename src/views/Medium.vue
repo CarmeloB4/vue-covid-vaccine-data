@@ -1,7 +1,7 @@
 <template>
 <div id="general">
-<div id="dashboard">
-<div id="logo-vcc">
+<div id="dashboard-medium">
+<div id="logo-vcc-medium">
     <img src="..\assets\logo-vcc.png" alt="Logo somministrazioni">
 </div>    
 <h2>Totale somministrazioni</h2>
@@ -37,7 +37,7 @@ mounted() {
  padding-top: 2%;
 }
 
-#dashboard {
+#dashboard-medium {
     margin-top: 1%;
     padding: 1%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -49,7 +49,7 @@ mounted() {
     text-align: center;
 }
 
-#logo-vcc {
+#logo-vcc-medium {
   position: absolute;
   top: 50%;
   left: 10%;
@@ -57,12 +57,25 @@ mounted() {
   transform: translate(-50%, -50%);
 }
 
-#logo-vcc img {
+#logo-vcc-medium img {
     width: 50px;
     height: 50px;
 }
 
 #data {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+    
+#dashboard-medium {
+    width: 100%;
+}
+
+#logo-vcc-medium {
+  top: 70%;
+  left: 15%;
+}
+
 }
 </style>

@@ -49,6 +49,9 @@ mounted() {
 </script>
 
 <style>
+
+
+
 #home {
     padding-top: 1%;
 }
@@ -133,4 +136,18 @@ mounted() {
     bottom: 10%;
     width: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+    
+#dashboard {
+    width: 100%;
+}
+
+#logo-vcc {
+  top: 70%;
+  left: 15%;
+}
+
+}
+
 </style>
