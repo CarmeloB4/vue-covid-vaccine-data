@@ -148,6 +148,11 @@ mounted() {
   left: 15%;
 }
 
+.nav-button {
+    float: none;
+    width: auto;
+}
+
 }
 
 </style>
