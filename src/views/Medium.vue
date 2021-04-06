@@ -69,6 +69,7 @@ mounted() {
 @media only screen and (max-width: 768px) {
     
 #dashboard-medium {
+    margin-top: 10%;
     width: 100%;
 }
 

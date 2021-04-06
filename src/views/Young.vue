@@ -70,6 +70,7 @@ mounted() {
 @media only screen and (max-width: 768px) {
     
 #dashboard-young {
+    margin-top: 10%;
     width: 100%;
 }
 
