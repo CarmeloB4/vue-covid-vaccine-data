@@ -7,7 +7,7 @@
 </div>    
 <h2>Totale somministrazioni</h2>
 <div id="data">
-<h2>{{data}}</h2>
+<h2>{{Intl.NumberFormat().format(data)}}</h2> 
 </div>
 </div>
 <div id="nav">
@@ -43,7 +43,7 @@ mounted() {
       .then(res => {
           return res.json()
       })
-      .then((result) =>  this.data = result.data.map((vcc) => vcc.dosi_somministrate).reduce(((accumulator, currentValue) => accumulator + currentValue))) 
+      .then((result) =>  this.data = result.data.map((vcc) => vcc.dosi_somministrate).reduce(((accumulator, currentValue) => accumulator + currentValue)))
   }
 }
 </script>

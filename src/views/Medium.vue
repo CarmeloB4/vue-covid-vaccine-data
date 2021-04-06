@@ -6,7 +6,7 @@
 </div>    
 <h2>Totale somministrazioni</h2>
 <div id="data">
-<h2>{{data}}</h2>
+<h2>{{Intl.NumberFormat().format(data)}}</h2>
 </div>
 </div>
 </div>
